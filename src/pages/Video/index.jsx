@@ -1,11 +1,14 @@
 import { useState } from "react";
 import styles from "./Video.module.css";
+import { useNavigate } from "react-router-dom";
+import { videoService } from "../../services/videoService";
 
 export default function Video() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     title: "",
     category: "",
-    imageUrl: "",
+    img: "",
     videoUrl: "",
     description: "",
   });
@@ -18,17 +21,26 @@ export default function Video() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Add your submit logic here
+    try {
+      await videoService.createVideo({
+        ...formData,
+        imageUrl: formData.img, // Ensure API compatibility
+      });
+      alert("Video added successfully!");
+      navigate("/"); // Redirect to home page
+    } catch (error) {
+      console.error("Error adding video:", error);
+      alert("Failed to add video. Please try again.");
+    }
   };
 
   const handleClear = () => {
     setFormData({
       title: "",
       category: "",
-      imageUrl: "",
+      img: "",
       videoUrl: "",
       description: "",
     });
@@ -64,8 +76,8 @@ export default function Video() {
 
           <input
             type="url"
-            name="imageUrl"
-            value={formData.imageUrl}
+            name="img"
+            value={formData.img}
             onChange={handleChange}
             placeholder="Thumbnail URL"
             required

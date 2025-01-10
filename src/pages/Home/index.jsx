@@ -2,7 +2,7 @@ import Banner from "../../components/Banner";
 import Category from "../../components/Category";
 import styles from "./Home.module.css";
 import categories from "../../db/db.json";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { videoService } from "../../services/videoService";
 
 export default function Home() {
