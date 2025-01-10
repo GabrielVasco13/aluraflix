@@ -4,6 +4,7 @@
   position: fixed;
   top: 0;
   height: 125px;
+  border-bottom: 7px solid rgb(63, 96, 158);
 }
 
 .container {
