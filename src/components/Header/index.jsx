@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./Header.module.css";
 import logo from "./logo.png";
 
@@ -8,9 +8,22 @@ export default function Header() {
       <div className={styles.container}>
         <img src={logo} alt="Aluraflix logo" className={styles.logo} />
         <nav className={styles.navigation}>
-          <Link to="/" className={styles.link}>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? styles.linkHomeActive : styles.linkHome
+            }
+          >
             Home
-          </Link>
+          </NavLink>
+          <NavLink
+            to="/video"
+            className={({ isActive }) =>
+              isActive ? styles.linkHomeActive : styles.linkHome
+            }
+          >
+            Vídeo
+          </NavLink>
         </nav>
       </div>
     </header>

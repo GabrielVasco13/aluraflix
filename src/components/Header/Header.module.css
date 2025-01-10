@@ -1,0 +1,47 @@
+.header {
+  width: 100%;
+  background-color: rgb(48, 47, 47);
+  position: fixed;
+  top: 0;
+  height: 125px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  padding-left: 2em;
+}
+
+.navigation {
+  display: flex;
+  gap: 2rem;
+  padding-right: 2em;
+}
+
+.linkHome {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 12px 40px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.linkHomeActive {
+  composes: linkHome;
+  font-weight: bold;
+  color: cornflowerblue;
+  background-color: black;
+  border-color: cornflowerblue;
+}
