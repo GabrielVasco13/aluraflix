@@ -1,0 +1,62 @@
+{
+  "frontEnd": [
+    {
+      "id": 1,
+      "title": "O que faz uma desenvolvedora Front-End",
+      "img": "https://i.ytimg.com/vi/xCYSjdeI4IQ/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDB8D98zGsgZ3T3UiYQ0eu9jVymOw",
+      "category": "FRONT END"
+    },
+    {
+      "id": 2,
+      "title": "Árvores Binárias",
+      "img": "https://i.ytimg.com/vi/xCYSjdeI4IQ/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDB8D98zGsgZ3T3UiYQ0eu9jVymOw",
+      "category": "FRONT END"
+    },
+    {
+      "id": 3,
+      "title": "Implementando UX no Front-End",
+      "img": "https://i.ytimg.com/vi/xCYSjdeI4IQ/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDB8D98zGsgZ3T3UiYQ0eu9jVymOw",
+      "category": "FRONT END"
+    }
+  ],
+  "backEnd": [
+    {
+      "id": 4,
+      "title": "O que estudar para ser Back-End Developer?",
+      "img": "https://i.ytimg.com/vi/xCYSjdeI4IQ/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDB8D98zGsgZ3T3UiYQ0eu9jVymOw",
+      "category": "BACK END"
+    },
+    {
+      "id": 5,
+      "title": "GitHub CLI - Uma nova experiência",
+      "img": "https://i.ytimg.com/vi/xCYSjdeI4IQ/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDB8D98zGsgZ3T3UiYQ0eu9jVymOw",
+      "category": "BACK END"
+    },
+    {
+      "id": 6,
+      "title": "Qual a melhor linguagem de programação?",
+      "img": "https://i.ytimg.com/vi/xCYSjdeI4IQ/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDB8D98zGsgZ3T3UiYQ0eu9jVymOw",
+      "category": "BACK END"
+    }
+  ],
+  "mobile": [
+    {
+      "id": 7,
+      "title": "Desenvolvimento Android",
+      "img": "https://i.ytimg.com/vi/xCYSjdeI4IQ/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDB8D98zGsgZ3T3UiYQ0eu9jVymOw",
+      "category": "MOBILE"
+    },
+    {
+      "id": 8,
+      "title": "The New React Native",
+      "img": "https://i.ytimg.com/vi/xCYSjdeI4IQ/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDB8D98zGsgZ3T3UiYQ0eu9jVymOw",
+      "category": "MOBILE"
+    },
+    {
+      "id": 9,
+      "title": "Hello World com Flutter",
+      "img": "https://i.ytimg.com/vi/xCYSjdeI4IQ/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDB8D98zGsgZ3T3UiYQ0eu9jVymOw",
+      "category": "MOBILE"
+    }
+  ]
+}

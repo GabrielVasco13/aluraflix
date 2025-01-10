@@ -19,7 +19,7 @@ export default function Header() {
           <NavLink
             to="/video"
             className={({ isActive }) =>
-              isActive ? styles.linkHomeActive : styles.linkHome
+              isActive ? styles.linkVideoActive : styles.linkVideo
             }
           >
             Vídeo
