@@ -6,6 +6,8 @@ export default function EditCard({ video, isOpen, onClose, onClick, onSave }) {
     title: video?.title || "",
     category: video?.category || "",
     img: video?.img || "",
+    videoUrl: video?.videoUrl || "",
+    description: video?.description || "",
   });
 
   const handleChange = (e) => {
@@ -34,7 +36,7 @@ export default function EditCard({ video, isOpen, onClose, onClick, onSave }) {
             name="title"
             value={editData.title}
             onChange={handleChange}
-            placeholder="Video Title"
+            placeholder="Titulo do vídeo"
           />
           <select
             name="category"
@@ -50,7 +52,20 @@ export default function EditCard({ video, isOpen, onClose, onClick, onSave }) {
             name="img"
             value={editData.img}
             onChange={handleChange}
-            placeholder="Thumbnail URL"
+            placeholder="URL da imagem"
+          />
+          <input
+            type="url"
+            name="videoUrl"
+            value={editData.videoUrl}
+            onChange={handleChange}
+            placeholder="URL do video"
+          />
+          <textarea
+            name="description"
+            value={editData.description}
+            onChange={handleChange}
+            placeholder="Descrição do video"
           />
           <div className={styles.buttonContainer}>
             <button type="submit">Save</button>

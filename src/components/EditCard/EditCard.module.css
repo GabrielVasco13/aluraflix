@@ -41,6 +41,28 @@
   font-size: 1rem;
 }
 
+.modalContent textarea {
+  padding: 0.8rem;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background-color: #2c2c2c;
+  color: white;
+  font-size: 1rem;
+  min-height: 120px;
+  resize: vertical;
+  width: 100%;
+  font-family: inherit;
+}
+
+.modalContent textarea:focus {
+  outline: none;
+  border-color: #2196f3;
+}
+
+.modalContent textarea::placeholder {
+  color: #666;
+}
+
 .buttonContainer {
   display: flex;
   gap: 1rem;
