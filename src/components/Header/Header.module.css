@@ -30,40 +30,28 @@
   padding-right: 2em;
 }
 
-.linkHome {
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  border: 1px solid #fff;
-  padding: 12px 40px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-.linkHomeActive {
-  composes: linkHome;
-  font-weight: bold;
-  color: cornflowerblue;
-  background-color: black;
-  border-color: cornflowerblue;
-}
-
+.linkHome,
 .linkVideo {
   color: #fff;
   font-weight: bold;
   text-decoration: none;
   border: 1px solid #fff;
-  padding: 12px 40px;
+  padding: 12px 24px;
+  min-width: 120px;
+  text-align: center;
   border-radius: 8px;
   transition: all 0.3s ease;
 }
 
+.linkHomeActive,
 .linkVideoActive {
   color: cornflowerblue;
   font-weight: bold;
   text-decoration: none;
   border: 1px solid cornflowerblue;
-  padding: 12px 40px;
+  padding: 12px 24px;
+  min-width: 120px;
+  text-align: center;
   border-radius: 8px;
   background-color: black;
   transition: all 0.3s ease;
