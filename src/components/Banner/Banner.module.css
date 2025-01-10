@@ -47,16 +47,16 @@
   background-color: #00bfff;
   color: white;
   padding: 16px 40px;
-  font-size: 32px;
+  font-size: 40px !important;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 16px;
   display: inline-block;
   margin-bottom: 10px; /* Espaço entre o rótulo e o título */
 }
 
 .videoOverlay {
   position: absolute;
-  top: 30%; /* Adjust this value to move up/down */
+  top: 0%; /* Adjust this value to move up/down */
   right: 5%;
   width: 840px;
   height: 430px;
