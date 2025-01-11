@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./EditCard.module.css";
+import { videoService } from "../../services/videoService";
 
 export default function EditCard({ video, isOpen, onClose, onClick, onSave }) {
   const [editData, setEditData] = useState({
@@ -18,10 +19,17 @@ export default function EditCard({ video, isOpen, onClose, onClick, onSave }) {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    onSave(editData);
-    onClose();
+    try {
+      await videoService.updateVideo(video.id, editData);
+      alert("Video updated successfully!");
+      onClose();
+      window.location.reload(); // Refresh to show updated data
+    } catch (error) {
+      console.error("Error updating video:", error);
+      alert("Failed to update video. Please try again.");
+    }
   };
 
   if (!isOpen) return null;

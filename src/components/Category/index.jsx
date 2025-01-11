@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./Category.module.css";
 import EditCard from "../EditCard";
+import { videoService } from "../../services/videoService";
 
 export default function Category({ title, videos, color }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -11,11 +12,18 @@ export default function Category({ title, videos, color }) {
     setIsModalOpen(true);
   };
 
-  const handleSave = (updatedVideo) => {
-    console.log("Updated video:", updatedVideo);
-    // Add your save logic here
+  const handleDelete = async (videoId) => {
+    if (window.confirm("Are you sure you want to delete this video?")) {
+      try {
+        await videoService.deleteVideo(videoId);
+        alert("Video deleted successfully!");
+        window.location.reload(); // Refresh to show updated data
+      } catch (error) {
+        console.error("Error deleting video:", error);
+        alert("Failed to delete video. Please try again.");
+      }
+    }
   };
-
   return (
     <div className={styles.categorySection}>
       <h2 className={styles.categoryTitle} style={{ backgroundColor: color }}>
@@ -30,7 +38,12 @@ export default function Category({ title, videos, color }) {
               className={styles.cardImage}
             />
             <div className={styles.cardActions}>
-              <button className={styles.deleteButton}>DELETAR</button>
+              <button
+                className={styles.deleteButton}
+                onClick={() => handleDelete(video.id)}
+              >
+                DELETAR
+              </button>
               <button
                 className={styles.editButton}
                 onClick={() => handleEdit(video)}
@@ -45,7 +58,6 @@ export default function Category({ title, videos, color }) {
         video={selectedVideo}
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
-        onSave={handleSave}
       />
     </div>
   );
