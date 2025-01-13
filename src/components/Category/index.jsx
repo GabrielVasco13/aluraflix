@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Category.module.css";
 import EditCard from "../EditCard";
 import { videoService } from "../../services/videoService";
@@ -6,24 +6,39 @@ import { videoService } from "../../services/videoService";
 export default function Category({ title, videos, color }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState(null);
+  const [video, setVideo] = useState([]);
 
   const handleEdit = (video) => {
     setSelectedVideo(video);
     setIsModalOpen(true);
   };
 
+  useEffect(() => {
+    setVideo(video);
+  }, [video]);
+
   const handleDelete = async (videoId) => {
-    if (window.confirm("Are you sure you want to delete this video?")) {
-      try {
+    if (!videoId) {
+      alert("Invalid video ID");
+      return;
+    }
+
+    try {
+      if (window.confirm("Tem certeza?")) {
         await videoService.deleteVideo(videoId);
-        alert("Video deleted successfully!");
-        window.location.reload(); // Refresh to show updated data
-      } catch (error) {
-        console.error("Error deleting video:", error);
-        alert("Failed to delete video. Please try again.");
+
+        window.location.reload();
+      }
+    } catch (error) {
+      console.error("Delete failed:", error);
+      if (error.message.includes("not found")) {
+        alert("This video may have been already deleted");
+      } else {
+        alert(`Failed to delete video: ${error.message}`);
       }
     }
   };
+
   return (
     <div className={styles.categorySection}>
       <h2 className={styles.categoryTitle} style={{ backgroundColor: color }}>
